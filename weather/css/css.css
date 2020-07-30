@@ -47,7 +47,7 @@ h1{
     text-align: center;
     margin: 0 auto;
     margin-top: -30px;
-    padding: 2% 0;
+    padding: 1% 0;
     /* opacity: 0.8; */
 
 }
@@ -101,7 +101,7 @@ section>figure, section>.temp{
 .body_center{
     display: flex;
     justify-content:space-between;
-    margin: 100px 20%;
+    margin: 100px 14%;
 }
 .max_box{
     display: flex;
@@ -111,27 +111,43 @@ section>figure, section>.temp{
     display: flex;
 }
 .temp_max{
+    margin-top: -11px;
     font-size: 2em;
+    /* color: #f3283b;
+    font-weight: bold; */
+
 }
 .temp_min{
+    margin-top: -11px;
     font-size: 2em;
+    /* color: #4691f6;
+    font-weight: bold; */
+
 }
 .temp_letter{
     width:40px;
     margin-right: 10px;
-    padding: 1% 1%;
+    /* padding: 1% 1%; */
+    /* font-weight: bold; */
 }
 .ctr_right{
 }
-.wind_box{
+.wind_box, .rain_box, .feels_like_box{
     display: flex;
+    width:130px;
 }
-.wind{
+.wind_img, .rain_img, .feels_like_img{
+    height: 20px;
+    margin-right: 2px;
+}
+.wind_letter, .rain_letter, .feels_like_letter{
+    margin-right: 10px;
+    width:80px;
+}
+.wind, .rain, .feels_like{
     font-size: 1em;
 }
-.wind_letter{
-    margin-right: 10px;
-}
+
 
 /* 로딩이미지 */
 #weather_info .load img{

@@ -41,16 +41,19 @@
                 </div>
                 <div class="ctr_right">
                     <div class="wind_box">
+                        <img src="img/iconfinder_icon-43-wind_315686.png" class="wind_img" alt="">
                         <p class="wind_letter">풍속</p>
                         <p class="wind"></p>
                     </div>
                     <div class="rain_box">
-                        <p class="rain_letter">강수량</p>
+                        <img src="img/iconfinder_weather_12_2682839.png" class="rain_img"  alt="">
+                        <p class="rain_letter">습도</p>
                         <p class="rain"></p>
                     </div>
-                    <div class="dust_box">
-                        <p class="dust_letter">미세먼지</p>
-                        <p class="dust"></p>
+                    <div class="feels_like_box">
+                        <img src="img/iconfinder_square_temperature_2571371.png" class="feels_like_img"  alt="">
+                        <p class="feels_like_letter">체감온도</p>
+                        <p class="feels_like"></p>
                     </div>
                 </div>
             </div>
@@ -133,8 +136,9 @@
 // API 요청
         var url = 'https://api.openweathermap.org/data/2.5/weather?q=seoul&appid=670bf5d30cda72bc335154412e500db7';
 
-        // var url ='https://api.openweathermap.org/data/2.5/onecall?lat=37.5583&lon=126.791&exclude={part}&appid=670bf5d30cda72bc335154412e500db7'
+        var url2 ='https://api.openweathermap.org/data/2.5/onecall?lat=37.5583&lon=126.791&exclude=hourly,daily&appid=670bf5d30cda72bc335154412e500db7'
 
+        // var url2 = 'https://api.openweathermap.org/data/2.5/onecall?lat=33.441792&lon=-94.037689&exclude=hourly,daily&appid=670bf5d30cda72bc335154412e500db7'
         // 로딩 이미지 표시
         $('weather_info .load_img').show();
 
@@ -152,7 +156,8 @@
             var temp_max = main.temp_max;   // 최고 온도
             var wind = data.wind.speed;     // 바람
             var rain = data.main.humidity; //      // 습도
-            var dust = data.main.rain;      // 습도
+            var feels_like = main.feels_like;      // 습도
+            // var hourly_pop = data.hourly.pop; //강수확률 
 
 
 
@@ -177,7 +182,7 @@
 
 
             // 날씨 정보 표시
-            $('#weather_info > .city').html(city + "/" + country);
+            $('#weather_info > .city').html(city);
             // $('#weather_info .icon').html("<img src='" + icon_url + ".png'>");
             $('#weather_info .w_id').html(wmain);
             $('#weather_info .temp_min').html(parseInt(temp_min-273.15) + '&deg;');
@@ -185,7 +190,9 @@
             $('#weather_info .temp').html(parseInt(temp-273.15) + '&deg;');
             $('#weather_info .wind').html(parseInt(wind) + 'm/s');
             $('#weather_info .rain').html(rain + 'm/s');
-            $('#weather_info .dust').html(parseInt(dust) + 'm/s');
+            $('#weather_info .feels_like').html(parseInt(feels_like-273.15) + '&deg;');
+
+ 
 
 
 
