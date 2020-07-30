@@ -38,6 +38,7 @@
                         <p class="temp_letter">최저</p>
                         <p class="temp_min"></p>
                     </div>
+                    <div class="timezone"></div>
                 </div>
                 <div class="ctr_right">
                     <div class="wind_box">
@@ -136,12 +137,17 @@
 // API 요청
         var url = 'https://api.openweathermap.org/data/2.5/weather?q=seoul&appid=670bf5d30cda72bc335154412e500db7';
 
-        var url2 ='https://api.openweathermap.org/data/2.5/onecall?lat=37.5583&lon=126.791&exclude=hourly,daily&appid=670bf5d30cda72bc335154412e500db7'
+        // var url2 ='https://api.openweathermap.org/data/2.5/onecall?lat=37.5583&lon=126.791&exclude=minutely&appid=670bf5d30cda72bc335154412e500db7'
 
         // var url2 = 'https://api.openweathermap.org/data/2.5/onecall?lat=33.441792&lon=-94.037689&exclude=hourly,daily&appid=670bf5d30cda72bc335154412e500db7'
         // 로딩 이미지 표시
+   
+        
         $('weather_info .load_img').show();
 
+        // $.getJSON(url2,function(data){
+        //     var timezone = data.timezone;
+        // })
         $.getJSON(url,function(data){
             var sys = data.sys;             // 국가명, 일출 일몰
             var city = data.name;           // 도시명
@@ -191,6 +197,8 @@
             $('#weather_info .wind').html(parseInt(wind) + 'm/s');
             $('#weather_info .rain').html(rain + 'm/s');
             $('#weather_info .feels_like').html(parseInt(feels_like-273.15) + '&deg;');
+            // $('#weather_info .timezone').html(timezone + 'm/s');
+
 
  
 
@@ -201,6 +209,8 @@
             // 데이터 로딩 후 로딩이미지 제거
             $('#weather_info .load_img').hide();
         })
+
+   
 
         // // end getJSON
         .fail(function(){
