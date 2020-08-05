@@ -252,3 +252,9 @@ $( '.logo' ).click( function() {
 //         setTimeout(doSlideshow,1000);
 //     });
 // }
+
+
+// 즐겨찾기
+$('.often_click').click(function(){
+    alert("감사합니다.^^")
+})
