@@ -43,10 +43,10 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 
 /* logo */
 .logo{
+  width: 100%;
   z-index: 99999999;
   position: fixed;
-  left: 45%;
-  top: 85.4%;
+  top: 87.2%;
   display: none;
 }
 /* by 컴맹선생 */
@@ -58,6 +58,12 @@ h1, h2, h3, h4, h5, h6, .font-primary {
     -webkit-transform: translateY(-100px);
     transform: translateY(-100px);
     transition: all 1.2s;
+}
+.logo a{
+  display: block;
+    width: 200px;
+    height: 225px;
+  margin: 0 auto !important;
 }
 
 
