@@ -1,7 +1,7 @@
 
 // scroll logo menu
 $(window).scroll(function () {
-    if($(window).scrollTop() < 10) {
+    if($(window).scrollTop() < 150) {
      $('.logo').fadeOut(700);
     } else {
      $('.logo').fadeIn(700);

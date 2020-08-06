@@ -676,7 +676,7 @@ section {
 .breadcrumbs h2 {
   font-size: 28px;
   font-weight: 300;
-  color: rgb(61, 61, 61);
+  color: #666;
 }
 
 .breadcrumbs ol {
@@ -689,6 +689,7 @@ section {
 
 .breadcrumbs ol li + li {
   padding-left: 10px;
+  color: #666;
 }
 
 .breadcrumbs ol li + li::before {
@@ -2501,6 +2502,9 @@ section {
 .about{
   margin-top: 20px;
 
+}
+.txt_sub{
+  color: rgb(241, 118, 18);
 }
 .about_h3{
   font-size: 22px !important;
