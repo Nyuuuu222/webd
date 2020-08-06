@@ -28,7 +28,8 @@ body {
 }
 
 a {
-  color: #4fa6d5;
+  /* color: #4fa6d5; */
+  color: rgb(131, 92, 47);
 }
  
 a:hover {
@@ -72,7 +73,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
-.back-to-top {
+/* .back-to-top {
   position: fixed;
   display: none;
   width: 40px;
@@ -97,7 +98,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   color: #fff;
   background: #85b6cf;
   transition: background 0.2s ease-in-out;
-}
+} */
 
 /*--------------------------------------------------------------
 # Header
@@ -613,11 +614,12 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 # Sections General
 --------------------------------------------------------------*/
 section {
-  padding: 60px 0;
+  padding: 30px 0;
 }
 
 .section-bg {
   background-color: #f3f8fa;
+  margin-top: 16px;
 }
 
 .section-title {
@@ -665,13 +667,16 @@ section {
 --------------------------------------------------------------*/
 .breadcrumbs {
   padding: 15px 0;
-  background-color: #f3f8fa;
+  /* background-color: #f3f8fa; */
+  background: rgba(243, 205, 156, 0.301);
+  /* opacity: 0.3; */
   min-height: 40px;
 }
 
 .breadcrumbs h2 {
   font-size: 28px;
   font-weight: 300;
+  color: rgb(61, 61, 61);
 }
 
 .breadcrumbs ol {
@@ -2343,6 +2348,21 @@ section {
   transition: 0.3s;
   border-radius: 50px;
 }
+#footer .footer-newsletter form input[type="button"] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border: 0;
+  background: none;
+  font-size: 16px;
+  padding: 0 20px;
+  margin: 3px;
+  background: #f7a549;
+  color: #fff;
+  transition: 0.3s;
+  border-radius: 50px;
+}
 
 #footer .footer-newsletter form input[type="submit"]:hover {
   background: #468db3;
@@ -2465,4 +2485,42 @@ section {
 
 #footer .credits a {
   color: #e69941;
+}
+
+
+
+/* home end */
+
+
+
+
+
+
+
+/* about start */
+.about{
+  margin-top: 20px;
+
+}
+.about_h3{
+  font-size: 22px !important;
+  color: rgb(250, 164, 93);
+
+}
+.about_txt1{
+}
+
+.logo_face{
+  width: 60%;
+  margin: 0 auto !important;
+}
+.logo_face img{
+  margin-top: 0px;
+  width: 100px;
+  padding-left: 10%;
+}
+.about_txt2{
+  text-align: center;
+  font-weight: 350;
+  margin-top: -16px;
 }
